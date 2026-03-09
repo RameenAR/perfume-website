@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse all Scent Luxe luxury fragrances. Filter by category, scent family, price, longevity and occasion." />
+  <title>Shop All Fragrances | Scent Luxe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/shop.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── Shop Hero Banner ───────────────────────── -->
+    <div class="shop-hero" aria-label="Shop hero">
+      <img
+        class="shop-hero-img"
+        src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=1600&h=500&fit=crop&q=80"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        onerror="this.src='assets/images/placeholder.svg'"
+      />
+      <div class="shop-hero-overlay" aria-hidden="true"></div>
+      <div class="shop-hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Shop</span>
+        </nav>
+        <h1 class="shop-hero-title">The Collection</h1>
+        <p class="shop-hero-subtitle">12 artisan fragrances. One destined to be yours.</p>
+      </div>
+    </div>
+
+    <!-- ── Search Bar ─────────────────────────────── -->
+    <div class="shop-search-bar">
+      <div class="container">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="shop-search"
+            class="search-input"
+            placeholder="Search fragrances, notes, or scent families…"
+            aria-label="Search fragrances"
+          />
+          <button class="search-clear" id="search-clear" aria-label="Clear search">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Collection Spotlight Banners ─────────────── -->
+    <div class="shop-spotlights">
+      <div class="container">
+        <div class="spotlight-grid">
+          <div class="spotlight-card spotlight-oriental">
+            <div class="spotlight-content">
+              <span class="spotlight-eyebrow">New Arrivals</span>
+              <h3 class="spotlight-title">Oriental Mysteries</h3>
+              <p class="spotlight-desc">Rich oud, amber and dark spice — the boldest fragrances in our collection.</p>
+              <button class="spotlight-btn" onclick="filterByScent('Oriental')">Explore →</button>
+            </div>
+          </div>
+          <div class="spotlight-card spotlight-floral">
+            <div class="spotlight-content">
+              <span class="spotlight-eyebrow">Best Sellers</span>
+              <h3 class="spotlight-title">Floral Romance</h3>
+              <p class="spotlight-desc">Rose, jasmine and peony — the timeless heart of femininity.</p>
+              <button class="spotlight-btn" onclick="filterByScent('Floral')">Explore →</button>
+            </div>
+          </div>
+          <div class="spotlight-card spotlight-woody">
+            <div class="spotlight-content">
+              <span class="spotlight-eyebrow">Editor's Picks</span>
+              <h3 class="spotlight-title">Woody Depths</h3>
+              <p class="spotlight-desc">Cedarwood, sandalwood and vetiver — grounded and unforgettable.</p>
+              <button class="spotlight-btn" onclick="filterByScent('Woody')">Explore →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- ── Shop Header ─────────────────────────── -->
+      <header class="shop-header">
+        <div class="shop-header-top">
+          <span class="shop-count" id="product-count">12 products</span>
+          <div class="shop-quick-filters" role="group" aria-label="Quick filters">
+            <button class="quick-filter-btn active" data-quick-cat="all">All</button>
+            <button class="quick-filter-btn" data-quick-cat="Women">Women</button>
+            <button class="quick-filter-btn" data-quick-cat="Men">Men</button>
+            <button class="quick-filter-btn" data-quick-cat="Unisex">Unisex</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="shop-layout">
+
+        <!-- ── Filters Sidebar ────────────────────── -->
+        <aside aria-label="Product filters">
+          <button class="filters-toggle-btn" id="filters-toggle-btn">Show Filters ▼</button>
+
+          <div class="filters-sidebar" role="form" aria-label="Filter products">
+            <div class="filters-heading">Refine Results</div>
+
+            <!-- Category -->
+            <div class="filter-group">
+              <div class="filter-group-title">Category</div>
+              <label class="filter-option">
+                <input type="checkbox" class="filter-cat" value="Women">
+                <span>Women</span>
+                <span class="filter-count">4</span>
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" class="filter-cat" value="Men">
+                <span>Men</span>
+                <span class="filter-count">4</span>
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" class="filter-cat" value="Unisex">
+                <span>Unisex</span>
+                <span class="filter-count">4</span>
+              </label>
+            </div>
+
+            <!-- Scent Family -->
+            <div class="filter-group">
+              <div class="filter-group-title">Scent Family</div>
+              <label class="filter-option">
+                <input type="checkbox" class="filter-scent" value="Floral">
+                <span>🌹 Floral</span>
+                <span class="filter-count">3</span>
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" class="filter-scent" value="Woody">
+                <span>🌳 Woody</span>
+                <span class="filter-count">4</span>
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" class="filter-scent" value="Fresh">
+                <span>🌊 Fresh</span>
+                <span class="filter-count">2</span>
+              </label>
+              <label class="filter-option">
+                <input type="checkbox" class="filter-scent" value="Oriental">
+                <span>✨ Oriental</span>
+                <span class="filter-count">3</span>
+              </label>
+            </div>
+
+            <!-- Price Range -->
+            <div class="filter-group">
+              <div class="filter-group-title">Price Range</div>
+              <label class="filter-option">
+                <input type="radio" class="filter-price" name="price" value="all" id="price-all" checked>
+                <span>All Prices</span>
+              </label>
+              <label class="filter-option">
+                <input type="radio" class="filter-price" name="price" value="50-100">
+                <span>$50 – $100</span>
+              </label>
+              <label class="filter-option">
+                <input type="radio" class="filter-price" name="price" value="100-200">
+                <span>$100 – $200</span>
+              </label>
+              <label class="filter-option">
+                <input type="radio" class="filter-price" name="price" value="over-200">
+                <span>Over $200</span>
+              </label>
+            </div>
+
+            <!-- Sort -->
+            <div class="filter-group">
+              <div class="filter-group-title">Sort By</div>
+              <select class="filter-sort" id="filter-sort" aria-label="Sort products">
+                <option value="featured">Featured First</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="sidebar-trust">
+              <div class="sidebar-trust-item">✦ Free shipping over $75</div>
+              <div class="sidebar-trust-item">✦ 30-day returns</div>
+              <div class="sidebar-trust-item">✦ 100% authentic</div>
+            </div>
+
+            <button class="filters-clear-btn" id="filters-clear-btn">✕ Clear All Filters</button>
+          </div>
+        </aside>
+
+        <!-- ── Products Area ──────────────────────── -->
+        <section class="products-area" aria-label="Products">
+          <div class="products-grid" id="products-grid">
+            <!-- Injected by shop.js -->
+          </div>
+          <div id="no-results" class="no-results" style="display:none">
+            <div class="empty-state">
+              <div class="empty-state-icon">🔍</div>
+              <h3>No Fragrances Found</h3>
+              <p>Try adjusting your filters, clearing your search, or browse all fragrances.</p>
+              <button class="btn-primary" onclick="document.getElementById('filters-clear-btn').click()">Clear All Filters</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ── Fragrance Guide Banner ──────────────── -->
+      <div class="shop-guide-banner">
+        <div class="shop-guide-content">
+          <span class="guide-icon">📖</span>
+          <div>
+            <h3 class="guide-title">New to Fine Fragrance?</h3>
+            <p class="guide-desc">Read our complete fragrance guide — from understanding scent families to building your personal wardrobe.</p>
+          </div>
+          <a href="blog.html" class="btn-outline guide-cta-btn">Read the Guide</a>
+        </div>
+      </div>
+
+    </div><!-- .container -->
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/shop.js"></script>
+  <script>
+    function filterByScent(scent) {
+      const cb = document.querySelector(`.filter-scent[value="${scent}"]`);
+      if (cb) { cb.checked = true; cb.dispatchEvent(new Event('change')); }
+      document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Search functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('shop-search');
+      const clearBtn    = document.getElementById('search-clear');
+      if (!searchInput) return;
+
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.trim().toLowerCase();
+        clearBtn.style.display = q ? 'flex' : 'none';
+        const cards = document.querySelectorAll('.product-card');
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          card.closest('a') ? card.closest('a').style.display = (!q || text.includes(q)) ? '' : 'none'
+                            : card.style.display = (!q || text.includes(q)) ? '' : 'none';
+        });
+      });
+
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        document.querySelectorAll('.product-card').forEach(c => {
+          const el = c.closest('a') || c;
+          el.style.display = '';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

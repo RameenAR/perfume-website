@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product | Scent Luxe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <div class="container product-page-wrap">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>›</span>
+        <a href="shop.html">Shop</a><span>›</span>
+        <span id="bc-product-name">Product</span>
+      </nav>
+
+      <!-- Main Detail -->
+      <div class="product-detail">
+        <!-- Gallery -->
+        <div class="product-gallery">
+          <div class="main-image-wrap">
+            <img id="main-img" src="assets/images/placeholder.svg" alt="Product" />
+            <div class="img-zoom-hint">🔍 Hover to explore</div>
+          </div>
+          <div class="thumbnail-strip" id="thumbnail-strip"></div>
+        </div>
+        <!-- Info -->
+        <div class="product-info">
+          <div class="product-detail-brand" id="detail-brand">Brand</div>
+          <h1 class="product-detail-name" id="detail-name">Product Name</h1>
+          <div class="product-detail-meta">
+            <div class="product-detail-rating">
+              <div class="star-rating" id="detail-stars"></div>
+              <span class="product-detail-rating-num" id="detail-rating-num"></span>
+            </div>
+            <span class="product-detail-reviews" id="detail-reviews"></span>
+            <span class="product-detail-category" id="detail-category"></span>
+          </div>
+          <div class="product-detail-price" id="detail-price">$0.00</div>
+          <!-- Scent Family Badge -->
+          <div class="scent-family-badge" id="scent-family-badge"></div>
+          <p class="product-detail-desc" id="detail-desc"></p>
+          <!-- Product Story -->
+          <div class="product-story-box" id="product-story-box">
+            <div class="story-box-icon">✍️</div>
+            <p class="story-box-text" id="story-box-text"></p>
+          </div>
+          <!-- Tags -->
+          <div class="product-detail-tags" id="detail-tags"></div>
+          <!-- Size -->
+          <label class="selector-label">Select Size</label>
+          <div class="size-options" id="size-options" role="group"></div>
+          <!-- Quantity -->
+          <label class="selector-label">Quantity</label>
+          <div class="quantity-selector">
+            <button class="qty-btn" id="qty-minus" aria-label="Decrease">−</button>
+            <input class="qty-input" id="qty-input" type="number" value="1" min="1" max="10" />
+            <button class="qty-btn" id="qty-plus" aria-label="Increase">+</button>
+          </div>
+          <!-- Actions -->
+          <div class="product-actions">
+            <button class="btn-primary" id="btn-add-detail">🛍 Add to Cart</button>
+            <button class="btn-outline" onclick="toggleWishlist(window._currentProductId)" id="btn-wishlist">🤍 Wishlist</button>
+          </div>
+          <!-- Trust Badges -->
+          <div class="trust-badges">
+            <div class="trust-badge"><span>🚚</span><div><strong>Free Shipping</strong><small>On orders over $75</small></div></div>
+            <div class="trust-badge"><span>🔄</span><div><strong>Easy Returns</strong><small>30-day return policy</small></div></div>
+            <div class="trust-badge"><span>🛡️</span><div><strong>100% Authentic</strong><small>Certified genuine</small></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRAGRANCE NOTES PYRAMID -->
+      <section class="notes-section" id="notes-section">
+        <h2 class="section-title" style="text-align:left">Fragrance Notes</h2>
+        <div class="section-divider" style="margin-left:0"></div>
+        <div class="notes-pyramid">
+          <div class="notes-tier notes-top">
+            <div class="notes-tier-icon">☁️</div>
+            <div class="notes-tier-label">Top Notes</div>
+            <div class="notes-tier-desc">First impression · 15–30 minutes</div>
+            <div class="notes-list" id="notes-top"></div>
+          </div>
+          <div class="notes-tier notes-heart">
+            <div class="notes-tier-icon">❤️</div>
+            <div class="notes-tier-label">Heart Notes</div>
+            <div class="notes-tier-desc">Soul of the fragrance · 2–4 hours</div>
+            <div class="notes-list" id="notes-heart"></div>
+          </div>
+          <div class="notes-tier notes-base">
+            <div class="notes-tier-icon">🌍</div>
+            <div class="notes-tier-label">Base Notes</div>
+            <div class="notes-tier-desc">Lasting impression · 6–12 hours</div>
+            <div class="notes-list" id="notes-base"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERFUME PROFILE -->
+      <section class="profile-section" id="profile-section">
+        <h2 class="section-title" style="text-align:left">Fragrance Profile</h2>
+        <div class="section-divider" style="margin-left:0"></div>
+        <div class="profile-grid">
+          <div class="profile-card">
+            <div class="profile-icon">⏱️</div>
+            <div class="profile-label">Longevity</div>
+            <div class="profile-value" id="profile-longevity">—</div>
+          </div>
+          <div class="profile-card">
+            <div class="profile-icon">🌊</div>
+            <div class="profile-label">Sillage</div>
+            <div class="profile-value" id="profile-sillage">—</div>
+          </div>
+          <div class="profile-card">
+            <div class="profile-icon">🗓️</div>
+            <div class="profile-label">Best Season</div>
+            <div class="profile-value" id="profile-season">—</div>
+          </div>
+          <div class="profile-card">
+            <div class="profile-icon">✨</div>
+            <div class="profile-label">Occasion</div>
+            <div class="profile-value" id="profile-occasion">—</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW TO WEAR -->
+      <section class="how-to-section">
+        <h2 class="section-title" style="text-align:left">How to Wear It</h2>
+        <div class="section-divider" style="margin-left:0"></div>
+        <div class="how-to-grid">
+          <div class="how-to-card">
+            <div class="how-to-icon">🌡️</div>
+            <h3>Pulse Points</h3>
+            <p>Apply to wrists, neck, behind ears, and inner elbows. These warm spots amplify the fragrance and help it project naturally.</p>
+          </div>
+          <div class="how-to-card">
+            <div class="how-to-icon">💧</div>
+            <h3>Moisturised Skin</h3>
+            <p>Fragrance lasts longer on moisturised skin. Apply an unscented lotion before spraying for maximum longevity.</p>
+          </div>
+          <div class="how-to-card">
+            <div class="how-to-icon">👗</div>
+            <h3>Clothing Tips</h3>
+            <p>A light mist on clothing extends wear time but always patch-test on delicate fabrics first to prevent staining.</p>
+          </div>
+          <div class="how-to-card">
+            <div class="how-to-icon">☁️</div>
+            <h3>The Cloud Technique</h3>
+            <p>Spray into the air and walk through the mist for an all-over delicate scent — perfect for social occasions.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CUSTOMER REVIEWS -->
+      <section class="reviews-section" id="reviews-section">
+        <div class="reviews-header">
+          <div>
+            <h2 class="section-title" style="text-align:left">Customer Reviews</h2>
+            <div class="section-divider" style="margin-left:0"></div>
+          </div>
+          <div class="reviews-overall">
+            <div class="reviews-big-rating" id="reviews-big-rating">4.5</div>
+            <div class="reviews-stars-big" id="reviews-stars-big"></div>
+            <div class="reviews-total" id="reviews-total"></div>
+          </div>
+        </div>
+        <div class="reviews-grid" id="reviews-grid">
+          <!-- Injected by product.js -->
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq-section">
+        <h2 class="section-title" style="text-align:left">Frequently Asked Questions</h2>
+        <div class="section-divider" style="margin-left:0"></div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">Is this fragrance long-lasting?</summary>
+            <p class="faq-answer">All Scent Luxe fragrances are Eau de Parfum concentration (20–30% aromatic compounds), designed for exceptional longevity of 8–12+ hours on skin. Longevity varies based on skin type, humidity, and application method.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Are your perfumes cruelty-free?</summary>
+            <p class="faq-answer">Absolutely. Every Scent Luxe fragrance is 100% cruelty-free and never tested on animals. We are certified by PETA and Leaping Bunny. Our ingredients are ethically and sustainably sourced.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Do you offer samples before buying?</summary>
+            <p class="faq-answer">Yes! We offer a Discovery Set of 6 × 2ml samples for $25 (credited toward your first full bottle purchase). Contact us to request your personalised sample selection based on your preferences.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">What is your return policy?</summary>
+            <p class="faq-answer">We offer a 30-day satisfaction guarantee. If you're not completely in love with your purchase, return it in its original packaging for a full refund or exchange — no questions asked.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">How should I store my perfume?</summary>
+            <p class="faq-answer">Store in a cool, dry place away from direct sunlight and heat. Avoid bathrooms (humidity degrades fragrance). Keep the bottle upright and tightly capped. Properly stored, a fragrance lasts 3–5 years.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- RELATED PRODUCTS -->
+      <section id="related-products" aria-label="Related fragrances">
+        <h2 class="section-title" style="text-align:left;margin-bottom:var(--space-xl)">You May Also Like</h2>
+        <div class="related-grid" id="related-grid"></div>
+      </section>
+    </div>
+  </main>
+  <div id="footer"></div>
+  <script src="js/data/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

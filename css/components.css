@@ -1,0 +1,294 @@
+/* ============================================================
+   SHARED COMPONENTS — Product cards, stars, empty states
+   Feature: 008-perfume-static-site — Rose Velvet Theme
+   ============================================================ */
+
+/* ── Product Card ───────────────────────────────── */
+.product-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(196,109,143,0.07) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.65), 0 0 0 1px rgba(232,168,124,0.35);
+  border-color: rgba(232,168,124,0.4);
+}
+
+.product-card:hover::before { opacity: 1; }
+
+/* ── Card Image ─────────────────────────────────── */
+.product-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.product-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-card-img-wrap img {
+  transform: scale(1.07);
+}
+
+/* Gradient overlay at bottom of image */
+.product-card-img-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(8,5,3,0.65) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ── Badges ─────────────────────────────────────── */
+.product-card-badge {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  background: var(--gradient-gold);
+  color: #080503;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  z-index: 2;
+}
+
+.product-card-badge--new {
+  background: linear-gradient(135deg, #1a6340, #2a9460);
+  color: #fff;
+  top: calc(var(--space-md) + 30px);
+}
+
+.product-card-badge--hot {
+  background: linear-gradient(135deg, #8B1A3A, #C42C5A);
+  color: #fff;
+}
+
+/* ── Wishlist Button ────────────────────────────── */
+.wishlist-btn {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(8,5,3,0.75);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 3;
+  transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.wishlist-btn:hover {
+  background: rgba(8,5,3,0.9);
+  border-color: rgba(232,168,124,0.5);
+  transform: scale(1.12);
+}
+
+.wishlist-btn.wished {
+  background: rgba(180,30,60,0.2);
+  border-color: rgba(220,50,80,0.5);
+}
+
+/* ── Card Body ──────────────────────────────────── */
+.product-card-body {
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-xs);
+  position: relative;
+  z-index: 1;
+}
+
+.product-card-brand {
+  font-size: 0.7rem;
+  color: var(--color-gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.product-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+.product-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: 2px;
+}
+
+/* ── Stars ──────────────────────────────────────── */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.star {
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
+.star.empty { color: var(--color-border); }
+
+.review-count {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Card Footer ────────────────────────────────── */
+.product-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.product-card-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.02em;
+}
+
+.btn-add-cart {
+  background: rgba(232,168,124,0.12);
+  color: var(--color-gold);
+  border: 1px solid rgba(232,168,124,0.3);
+  border-radius: var(--radius-full);
+  padding: 0.4rem 1rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-add-cart:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #080503;
+  transform: scale(1.04);
+}
+
+.btn-add-cart:active { transform: scale(0.98); }
+
+/* ── Skeleton Loading ───────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg,
+    var(--color-surface) 25%,
+    var(--color-surface-2) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius);
+}
+
+.skeleton-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.skeleton-img  { aspect-ratio: 4/5; width: 100%; }
+.skeleton-body { padding: var(--space-md) var(--space-lg) var(--space-lg); display:flex; flex-direction:column; gap:var(--space-sm); }
+.skeleton-line { height: 14px; border-radius: 4px; }
+.skeleton-line.short  { width: 50%; }
+.skeleton-line.medium { width: 75%; }
+.skeleton-line.full   { width: 100%; }
+
+/* ── Empty State ────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: var(--space-4xl) var(--space-xl);
+  color: var(--color-text-muted);
+}
+
+.empty-state-icon {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-md);
+  filter: grayscale(0.3);
+}
+
+.empty-state h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.empty-state p {
+  margin-bottom: var(--space-xl);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Scent Category Pill ────────────────────────── */
+.scent-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.3rem 0.8rem;
+  background: var(--color-gold-subtle);
+  border: 1px solid var(--color-border-gold);
+  color: var(--color-gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+}

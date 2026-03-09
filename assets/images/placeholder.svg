@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" fill="#1A1A1A"/>
+  <rect x="160" y="80" width="80" height="20" rx="4" fill="#2E2E2E"/>
+  <rect x="140" y="95" width="120" height="8" rx="2" fill="#2E2E2E"/>
+  <rect x="130" y="100" width="140" height="220" rx="6" fill="#242424" stroke="#2E2E2E" stroke-width="1"/>
+  <ellipse cx="200" cy="100" rx="40" ry="8" fill="#2E2E2E"/>
+  <rect x="155" y="108" width="90" height="4" rx="2" fill="#C9A84C" opacity="0.4"/>
+  <rect x="160" y="200" width="80" height="2" rx="1" fill="#C9A84C" opacity="0.3"/>
+  <circle cx="200" cy="270" r="20" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.4"/>
+  <text x="200" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#9A9A8A">No Image</text>
+  <text x="200" y="402" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#2E2E2E">Available</text>
+</svg>

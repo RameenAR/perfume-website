@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scent Luxe — Curating the world's finest perfumes and fragrances. Discover luxury artisan scents crafted from rare ingredients." />
+  <title>Scent Luxe | Premium Perfumes &amp; Luxury Fragrances</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── Hero ──────────────────────────────────── -->
+    <section id="hero" aria-label="Hero banner">
+      <img
+        class="hero-bg-img"
+        src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=1600&h=900&fit=crop&q=80"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        onerror="this.src='assets/images/placeholder.svg'"
+      />
+      <div class="hero-bg-text" aria-hidden="true">LUXE</div>
+      <div class="hero-sparkles" aria-hidden="true">
+        <span class="sparkle"></span>
+        <span class="sparkle"></span>
+        <span class="sparkle"></span>
+        <span class="sparkle"></span>
+        <span class="sparkle"></span>
+        <span class="sparkle"></span>
+      </div>
+      <div class="hero-floating-bottle" aria-hidden="true">🧴</div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">✦ New Collection 2026</span>
+        <h1 class="hero-title">
+          Wear Your<br/><em>Finest Story</em>
+        </h1>
+        <p class="hero-subtitle">
+          Artisan fragrances crafted from the world's rarest ingredients. Each bottle holds a universe of memory, desire, and beauty.
+        </p>
+        <p class="hero-typing-hint" aria-label="Scent families">
+          <span class="typing-prefix">Discover: </span>
+          <span id="hero-typing" class="typing-text"></span>
+          <span class="typing-cursor">|</span>
+        </p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn-primary">Explore Collection</a>
+          <a href="blog.html" class="btn-outline">The Journal</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Trust Stats Bar ────────────────────────── -->
+    <section id="stats-bar" aria-label="Brand statistics">
+      <div class="container">
+        <div class="stats-bar-grid">
+          <div class="stat-bar-item">
+            <span class="stat-bar-num" data-target="12">0</span>
+            <span class="stat-bar-suffix">+</span>
+            <span class="stat-bar-label">Exclusive Fragrances</span>
+          </div>
+          <div class="stat-bar-divider"></div>
+          <div class="stat-bar-item">
+            <span class="stat-bar-num" data-target="50">0</span>
+            <span class="stat-bar-suffix">K+</span>
+            <span class="stat-bar-label">Happy Customers</span>
+          </div>
+          <div class="stat-bar-divider"></div>
+          <div class="stat-bar-item">
+            <span class="stat-bar-num">4.8</span>
+            <span class="stat-bar-suffix">★</span>
+            <span class="stat-bar-label">Average Rating</span>
+          </div>
+          <div class="stat-bar-divider"></div>
+          <div class="stat-bar-item">
+            <span class="stat-bar-num" data-target="30">0</span>
+            <span class="stat-bar-suffix">+</span>
+            <span class="stat-bar-label">Countries Shipped</span>
+          </div>
+          <div class="stat-bar-divider"></div>
+          <div class="stat-bar-item">
+            <span class="stat-bar-num">100</span>
+            <span class="stat-bar-suffix">%</span>
+            <span class="stat-bar-label">Cruelty Free</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured Products ──────────────────────── -->
+    <section id="featured" aria-label="Featured products" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Featured <span class="gold">Fragrances</span></h2>
+        <p class="section-subtitle">Hand-selected by our perfumers for their exceptional character and lasting impression</p>
+        <div class="section-divider"></div>
+        <div class="featured-grid" id="featured-grid"></div>
+        <div class="featured-cta">
+          <a href="shop.html" class="btn-outline">View All 12 Fragrances →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── New Arrivals ────────────────────────────── -->
+    <section id="new-arrivals" aria-label="New arrivals" class="reveal">
+      <div class="container">
+        <h2 class="section-title">New <span class="gold">Arrivals</span></h2>
+        <p class="section-subtitle">Fresh additions to the Scent Luxe collection — discover what just arrived</p>
+        <div class="section-divider"></div>
+        <div class="new-arrivals-grid featured-grid" id="new-arrivals-grid"></div>
+        <div class="featured-cta" style="margin-top:var(--space-2xl)">
+          <a href="shop.html" class="btn-outline">Explore More →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Best Sellers ────────────────────────────── -->
+    <section id="best-sellers" aria-label="Best sellers" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Best <span class="gold">Sellers</span></h2>
+        <p class="section-subtitle">Our most-loved fragrances — the ones customers can't stop wearing</p>
+        <div class="section-divider"></div>
+        <div class="bestsellers-grid featured-grid" id="bestsellers-grid"></div>
+        <div class="featured-cta" style="margin-top:var(--space-2xl)">
+          <a href="shop.html" class="btn-primary">Shop Best Sellers →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Full Collection Preview ─────────────────── -->
+    <section id="full-collection" aria-label="Full collection preview">
+      <div class="container">
+        <h2 class="section-title">The Full <span class="gold">Collection</span></h2>
+        <p class="section-subtitle">All 12 exclusive fragrances — from floral romance to deep oriental oud</p>
+        <div class="section-divider"></div>
+        <div class="collection-grid" id="collection-grid"></div>
+        <div class="featured-cta" style="margin-top:var(--space-2xl)">
+          <a href="shop.html" class="btn-primary">Shop All Fragrances →</a>
+          <a href="shop.html?cat=Women" class="btn-outline" style="margin-left:var(--space-md)">Women's →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Scent Families Banner ───────────────────── -->
+    <section id="scent-families" aria-label="Scent families" class="reveal">
+      <div class="scent-families-wrap">
+        <a class="scent-family-item" href="shop.html?scent=Floral" aria-label="Floral fragrances">
+          <img class="sf-bg-img" src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&h=300&fit=crop&q=80" alt="Floral fragrances" onerror="this.style.display='none'" />
+          <div class="sf-overlay"></div>
+          <span class="sf-icon">🌹</span>
+          <span class="sf-name">Floral</span>
+          <span class="sf-desc">Rose, Jasmine, Peony</span>
+        </a>
+        <a class="scent-family-item" href="shop.html?scent=Woody" aria-label="Woody fragrances">
+          <img class="sf-bg-img" src="https://images.unsplash.com/photo-1619994121345-b61cd610c5a6?w=400&h=300&fit=crop&q=80" alt="Woody fragrances" onerror="this.src='assets/images/placeholder.svg'" />
+          <div class="sf-overlay"></div>
+          <span class="sf-icon">🌳</span>
+          <span class="sf-name">Woody</span>
+          <span class="sf-desc">Cedarwood, Sandalwood, Vetiver</span>
+        </a>
+        <a class="scent-family-item" href="shop.html?scent=Fresh" aria-label="Fresh fragrances">
+          <img class="sf-bg-img" src="https://images.unsplash.com/photo-1614971803628-3f9b77b9d787?w=400&h=300&fit=crop&q=80" alt="Fresh fragrances" onerror="this.src='assets/images/placeholder.svg'" />
+          <div class="sf-overlay"></div>
+          <span class="sf-icon">🌊</span>
+          <span class="sf-name">Fresh</span>
+          <span class="sf-desc">Citrus, Marine, Green</span>
+        </a>
+        <a class="scent-family-item" href="shop.html?scent=Oriental" aria-label="Oriental fragrances">
+          <img class="sf-bg-img" src="https://images.unsplash.com/photo-1593467685267-f6c456e12e52?w=400&h=300&fit=crop&q=80" alt="Oriental fragrances" onerror="this.src='assets/images/placeholder.svg'" />
+          <div class="sf-overlay"></div>
+          <span class="sf-icon">✨</span>
+          <span class="sf-name">Oriental</span>
+          <span class="sf-desc">Oud, Amber, Spice</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Categories ────────────────────────────── -->
+    <section id="categories" aria-label="Shop by category" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Shop By <span class="gold">Collection</span></h2>
+        <p class="section-subtitle">Find the perfect scent crafted for your signature story</p>
+        <div class="section-divider"></div>
+        <div class="categories-grid" id="categories-grid"></div>
+      </div>
+    </section>
+
+    <!-- ── Scent Quiz CTA ─────────────────────────── -->
+    <section id="scent-quiz" aria-label="Find your scent" class="reveal">
+      <div class="container">
+        <div class="quiz-cta-card">
+          <div class="quiz-cta-content">
+            <span class="quiz-eyebrow">✦ Personalised Recommendation</span>
+            <h2 class="quiz-title">Not Sure Where to Start?</h2>
+            <p class="quiz-desc">Our fragrance quiz analyses your personality, preferences and lifestyle to match you with your perfect Scent Luxe fragrance in under 2 minutes.</p>
+            <div class="quiz-features">
+              <span class="quiz-feature">✓ 8 quick questions</span>
+              <span class="quiz-feature">✓ Instant results</span>
+              <span class="quiz-feature">✓ Expert-curated match</span>
+            </div>
+            <a href="shop.html" class="btn-primary">Take the Quiz →</a>
+          </div>
+          <div class="quiz-cta-visual" aria-hidden="true">
+            <div class="quiz-bottle-stack">
+              <span>🧴</span>
+              <span>🌹</span>
+              <span>✨</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA Banner ─────────────────────────────── -->
+    <section id="cta-banner" aria-label="Promotional banner">
+      <div class="cta-banner-inner">
+        <div class="cta-banner-bg-text" aria-hidden="true">LUXE</div>
+        <h2 class="cta-banner-title">Discover Your Signature Scent</h2>
+        <p class="cta-banner-text">Over 12 exclusive fragrances waiting to become part of your story. Free shipping on orders over $75.</p>
+        <div class="cta-banner-actions">
+          <a href="shop.html" class="cta-banner-btn">Shop All Fragrances</a>
+          <a href="blog.html" class="cta-banner-btn-ghost">Read The Journal</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why Choose Us ──────────────────────────── -->
+    <section id="why-us" aria-label="Why choose us" class="reveal">
+      <img class="why-us-bg-img" src="https://images.unsplash.com/photo-1583467875263-d50de56eb082?w=1600&h=800&fit=crop&q=80" alt="" aria-hidden="true" loading="lazy" onerror="this.src='assets/images/placeholder.svg'" />
+      <div class="container">
+        <h2 class="section-title">Why Choose <span class="gold">Scent Luxe</span></h2>
+        <p class="section-subtitle">Every detail crafted for an experience that goes far beyond the bottle</p>
+        <div class="section-divider"></div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">🚚</div>
+            <div class="why-title">Free Shipping</div>
+            <p class="why-desc">Complimentary worldwide shipping on all orders over $75. Delivered in signature Scent Luxe packaging with gold ribbon.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🛡️</div>
+            <div class="why-title">100% Authentic</div>
+            <p class="why-desc">Every fragrance is genuine, sourced directly from master perfumers and verified fragrance houses. Certified authentic, always.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🌸</div>
+            <div class="why-title">Expert Curation</div>
+            <p class="why-desc">Our certified perfumers personally select every scent. Only extraordinary fragrances with genuine character make the collection.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🎁</div>
+            <div class="why-title">Luxury Packaging</div>
+            <p class="why-desc">Each order arrives in a handcrafted gift box with gold ribbon and tissue — perfect as a gift or as a self-indulgence you deserve.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🔄</div>
+            <div class="why-title">30-Day Returns</div>
+            <p class="why-desc">Not completely in love? Return within 30 days for a full refund, no questions asked. Your satisfaction is our guarantee.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🌿</div>
+            <div class="why-title">Cruelty Free</div>
+            <p class="why-desc">All fragrances are 100% cruelty-free and never tested on animals. PETA certified and Leaping Bunny approved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Press / As Seen In ─────────────────────── -->
+    <section id="press" aria-label="Press mentions" class="reveal">
+      <div class="container">
+        <p class="press-label">✦ As Featured In</p>
+        <div class="press-logos">
+          <span class="press-logo">Vogue</span>
+          <span class="press-divider">|</span>
+          <span class="press-logo">Harper's Bazaar</span>
+          <span class="press-divider">|</span>
+          <span class="press-logo">The Fragrance Foundation</span>
+          <span class="press-divider">|</span>
+          <span class="press-logo">Cosmopolitan</span>
+          <span class="press-divider">|</span>
+          <span class="press-logo">GQ Magazine</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Testimonials ────────────────────────────── -->
+    <section id="testimonials" aria-label="Customer testimonials" class="reveal">
+      <div class="container">
+        <h2 class="section-title">Voices of Our <span class="gold">Community</span></h2>
+        <p class="section-subtitle">Hear from those who've found their signature scent with us</p>
+        <div class="section-divider"></div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">"Scent Luxe completely changed how I think about fragrance. The curation is impeccable and the packaging made me feel like absolute royalty. I am a customer for life."</blockquote>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&q=80" alt="Sophia Laurent" onerror="this.src='assets/images/placeholder.svg'" />
+              <div>
+                <div class="testimonial-name">Sophia Laurent</div>
+                <div class="testimonial-location">Paris, France · Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card testimonial-featured">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">"I ordered Midnight Rose as a gift and my wife hasn't stopped wearing it. The quality is extraordinary — truly a luxury experience from the moment you open the box to the last beautiful note."</blockquote>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&q=80" alt="James Whitmore" onerror="this.src='assets/images/placeholder.svg'" />
+              <div>
+                <div class="testimonial-name">James Whitmore</div>
+                <div class="testimonial-location">London, UK · Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">"Finding my signature scent felt impossible until Scent Luxe. The experience was beyond compare — both the fragrance and the service. Golden Oud is simply divine. Nothing else compares."</blockquote>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&q=80" alt="Aisha Khalid" onerror="this.src='assets/images/placeholder.svg'" />
+              <div>
+                <div class="testimonial-name">Aisha Khalid</div>
+                <div class="testimonial-location">Dubai, UAE · Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">"Cedar &amp; Storm is now my daily signature. The depth, the longevity, the sheer sophistication — I get comments every single day at the office. Worth every penny and then some."</blockquote>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&q=80" alt="Marco Reyes" onerror="this.src='assets/images/placeholder.svg'" />
+              <div>
+                <div class="testimonial-name">Marco Reyes</div>
+                <div class="testimonial-location">New York, USA · Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── From the Journal ───────────────────────── -->
+    <section id="journal-preview" aria-label="Latest journal articles" class="reveal">
+      <div class="container">
+        <div class="journal-preview-header">
+          <div>
+            <h2 class="section-title" style="text-align:left">From <span class="gold">The Journal</span></h2>
+            <p class="section-subtitle" style="text-align:left;margin:0">Fragrance guides, stories, and expertise</p>
+          </div>
+          <a href="blog.html" class="btn-outline">View All Articles</a>
+        </div>
+        <div class="journal-preview-grid">
+          <a href="blog.html#article-layering" class="journal-preview-card">
+            <div class="jp-img-wrap">
+              <img src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=500&h=320&fit=crop&q=80" alt="Fragrance layering guide" onerror="this.src='assets/images/placeholder.svg'" />
+              <span class="jp-badge">Tips &amp; Tricks</span>
+            </div>
+            <div class="jp-body">
+              <h3 class="jp-title">The Art of Layering Fragrances</h3>
+              <p class="jp-meta">Sophie Beaumont · 6 min read</p>
+            </div>
+          </a>
+          <a href="blog.html#article-oud" class="journal-preview-card">
+            <div class="jp-img-wrap">
+              <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=500&h=320&fit=crop&q=80" alt="Oud fragrance guide" onerror="this.src='assets/images/placeholder.svg'" />
+              <span class="jp-badge guide">Fragrance Guide</span>
+            </div>
+            <div class="jp-body">
+              <h3 class="jp-title">Oud: The Liquid Gold of the East</h3>
+              <p class="jp-meta">Amir Hassan · 8 min read</p>
+            </div>
+          </a>
+          <a href="blog.html#article-psychology" class="journal-preview-card">
+            <div class="jp-img-wrap">
+              <img src="https://images.unsplash.com/photo-1526510747491-58f928ec870f?w=500&h=320&fit=crop&q=80" alt="Psychology of scent" onerror="this.src='assets/images/placeholder.svg'" />
+              <span class="jp-badge science">Science</span>
+            </div>
+            <div class="jp-body">
+              <h3 class="jp-title">How Scent Shapes Your Mood</h3>
+              <p class="jp-meta">Dr. Elena Vasquez · 7 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Newsletter ──────────────────────────────── -->
+    <section id="newsletter" aria-label="Newsletter signup" class="reveal">
+      <div class="newsletter-section">
+        <div class="newsletter-content">
+          <div class="newsletter-badge">✦ Exclusive Access</div>
+          <h2 class="newsletter-title">Join the Inner Circle</h2>
+          <p class="newsletter-desc">Be first to know about new arrivals, exclusive drops, and insider fragrance stories from our perfumers. No spam — only the finest.</p>
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <div class="newsletter-input-wrap">
+              <input type="email" class="newsletter-input" placeholder="Your email address" id="newsletter-email" required />
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </div>
+            <p class="newsletter-privacy">By subscribing you agree to our Privacy Policy. Unsubscribe anytime.</p>
+          </form>
+        </div>
+        <img class="newsletter-deco" src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&h=400&fit=crop&q=80" alt="" aria-hidden="true" loading="lazy" onerror="this.style.display='none'" />
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

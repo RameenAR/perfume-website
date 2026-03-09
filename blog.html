@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Scent Journal — Fragrance guides, layering tips, oud stories and more from Scent Luxe." />
+  <title>The Journal | Scent Luxe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── Blog Hero ──────────────────────────────── -->
+    <section class="blog-hero">
+      <img
+        class="blog-hero-img"
+        src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=1600&h=600&fit=crop&q=80"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        onerror="this.src='assets/images/placeholder.svg'"
+      />
+      <div class="blog-hero-inner">
+        <span class="blog-hero-eyebrow">✦ Knowledge &amp; Discovery</span>
+        <h1 class="blog-hero-title">The Scent Journal</h1>
+        <p class="blog-hero-subtitle">
+          Deep dives into fragrance history, layering secrets, seasonal guides, and the science of scent — written by perfumers, for enthusiasts.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Category Filter ────────────────────────── -->
+    <div class="blog-filter-bar">
+      <div class="container">
+        <div class="blog-filter-pills">
+          <button class="blog-filter-btn active" data-cat="all">All Articles</button>
+          <button class="blog-filter-btn" data-cat="tips">Tips &amp; Tricks</button>
+          <button class="blog-filter-btn" data-cat="guide">Fragrance Guide</button>
+          <button class="blog-filter-btn" data-cat="collections">Collections</button>
+          <button class="blog-filter-btn" data-cat="science">Science &amp; Stories</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Featured Article ───────────────────────── -->
+    <section class="blog-featured reveal" data-cat="tips">
+      <div class="container">
+        <div class="featured-article-card">
+          <div class="featured-article-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=900&h=600&fit=crop&q=80"
+              alt="Layering fragrances — multiple perfume bottles"
+              onerror="this.src='assets/images/placeholder.svg'"
+            />
+            <span class="article-badge tips">Tips &amp; Tricks</span>
+          </div>
+          <div class="featured-article-content">
+            <span class="featured-label">✦ Editor's Pick</span>
+            <h2 class="featured-article-title">The Art of Layering Fragrances: A Complete Perfumer's Guide</h2>
+            <p class="featured-article-excerpt">
+              Discover how the world's most sophisticated fragrance wearers create an entirely unique, signature scent by combining two or more perfumes. From complementary families to layering order, this is everything you need to know — straight from a master perfumer's notebook.
+            </p>
+            <div class="article-meta">
+              <img class="author-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&q=80" alt="Sophie Beaumont" onerror="this.src='assets/images/placeholder.svg'" />
+              <div class="article-meta-info">
+                <span class="article-author">Sophie Beaumont</span>
+                <span class="article-date-time">Head Perfumer · March 5, 2026 · 6 min read</span>
+              </div>
+            </div>
+            <a href="#article-layering" class="btn-primary article-read-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Articles Grid ──────────────────────────── -->
+    <section class="blog-articles-section">
+      <div class="container">
+        <div class="blog-articles-grid" id="blog-grid">
+
+          <!-- Article 2 -->
+          <article class="article-card reveal" data-cat="guide">
+            <a href="#article-oud" class="article-card-link">
+              <div class="article-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&h=400&fit=crop&q=80"
+                  alt="Oud fragrance ingredients"
+                  onerror="this.src='assets/images/placeholder.svg'"
+                />
+                <span class="article-badge guide">Fragrance Guide</span>
+              </div>
+              <div class="article-card-body">
+                <h3 class="article-card-title">Oud: The Ancient Liquid Gold of Arabian Perfumery</h3>
+                <p class="article-card-excerpt">
+                  From the sacred agarwood forests of Southeast Asia to Parisian ateliers, oud has shaped luxury perfumery for over a thousand years. We trace its origins, explain why it costs more than gold, and reveal which of our fragrances it stars in.
+                </p>
+                <div class="article-card-meta">
+                  <img class="article-avatar-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&q=80" alt="Amir Hassan" onerror="this.src='assets/images/placeholder.svg'" />
+                  <span class="article-author-sm">Amir Hassan</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-date-sm">Feb 28, 2026</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-read-time">8 min</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article-card reveal" data-cat="collections">
+            <a href="#article-winter" class="article-card-link">
+              <div class="article-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&h=400&fit=crop&q=80"
+                  alt="Winter luxury fragrances collection"
+                  onerror="this.src='assets/images/placeholder.svg'"
+                />
+                <span class="article-badge collections">Collections</span>
+              </div>
+              <div class="article-card-body">
+                <h3 class="article-card-title">Winter 2026's Most Captivating Fragrances — Ranked</h3>
+                <p class="article-card-excerpt">
+                  As temperatures drop, warm spice and smoked wood come into their own. We've curated the twelve most compelling fragrances for the colder months — from quietly intense orientals to bold tobacco-leather statements that command every room.
+                </p>
+                <div class="article-card-meta">
+                  <img class="article-avatar-sm" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop&q=80" alt="Isabella Fontaine" onerror="this.src='assets/images/placeholder.svg'" />
+                  <span class="article-author-sm">Isabella Fontaine</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-date-sm">Feb 20, 2026</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-read-time">5 min</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="article-card reveal" data-cat="guide">
+            <a href="#article-concentration" class="article-card-link">
+              <div class="article-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&h=400&fit=crop&q=80"
+                  alt="Comparing perfume concentrations — EDP EDT"
+                  onerror="this.src='assets/images/placeholder.svg'"
+                />
+                <span class="article-badge guide">Fragrance Guide</span>
+              </div>
+              <div class="article-card-body">
+                <h3 class="article-card-title">EDP vs EDT vs Parfum: The Definitive Concentration Guide</h3>
+                <p class="article-card-excerpt">
+                  Why does the same fragrance smell different when labelled "Eau de Toilette" versus "Eau de Parfum"? We break down every concentration level, explain what the percentages actually mean, and tell you exactly which to choose for your lifestyle.
+                </p>
+                <div class="article-card-meta">
+                  <img class="article-avatar-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&q=80" alt="Sophie Beaumont" onerror="this.src='assets/images/placeholder.svg'" />
+                  <span class="article-author-sm">Sophie Beaumont</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-date-sm">Feb 10, 2026</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-read-time">4 min</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="article-card reveal" data-cat="science">
+            <a href="#article-psychology" class="article-card-link">
+              <div class="article-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1526510747491-58f928ec870f?w=600&h=400&fit=crop&q=80"
+                  alt="The psychology of scent and emotion"
+                  onerror="this.src='assets/images/placeholder.svg'"
+                />
+                <span class="article-badge science">Science &amp; Stories</span>
+              </div>
+              <div class="article-card-body">
+                <h3 class="article-card-title">The Psychology of Scent: How Fragrance Shapes Emotion and Memory</h3>
+                <p class="article-card-excerpt">
+                  Neuroscience reveals that smell is the sense most directly wired to the brain's emotional and memory centres. We explore why a single fragrance can transport you instantly to a lost summer — and how to use this power intentionally every day.
+                </p>
+                <div class="article-card-meta">
+                  <img class="article-avatar-sm" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&q=80" alt="Dr. Elena Vasquez" onerror="this.src='assets/images/placeholder.svg'" />
+                  <span class="article-author-sm">Dr. Elena Vasquez</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-date-sm">Jan 28, 2026</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-read-time">7 min</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="article-card reveal" data-cat="tips">
+            <a href="#article-wardrobe" class="article-card-link">
+              <div class="article-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1548679847-1d4ff48016c4?w=600&h=400&fit=crop&q=80"
+                  alt="Building a fragrance wardrobe"
+                  onerror="this.src='assets/images/placeholder.svg'"
+                />
+                <span class="article-badge tips">Tips &amp; Tricks</span>
+              </div>
+              <div class="article-card-body">
+                <h3 class="article-card-title">Building Your Fragrance Wardrobe: The Essential 5-Bottle Formula</h3>
+                <p class="article-card-excerpt">
+                  Just like a clothing wardrobe, a fragrance collection should cover every occasion. We reveal the five scent archetypes every serious enthusiast should own — from a morning fresh to an evening seduction — and exactly which bottles to start with.
+                </p>
+                <div class="article-card-meta">
+                  <img class="article-avatar-sm" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop&q=80" alt="Isabella Fontaine" onerror="this.src='assets/images/placeholder.svg'" />
+                  <span class="article-author-sm">Isabella Fontaine</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-date-sm">Jan 15, 2026</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-read-time">5 min</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Article 7 -->
+          <article class="article-card reveal" data-cat="science">
+            <a href="#article-storage" class="article-card-link">
+              <div class="article-card-img-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&h=400&fit=crop&q=80"
+                  alt="Proper perfume storage"
+                  onerror="this.src='assets/images/placeholder.svg'"
+                />
+                <span class="article-badge science">Science &amp; Stories</span>
+              </div>
+              <div class="article-card-body">
+                <h3 class="article-card-title">The Perfect Storage: How to Keep Your Fragrances Flawless for Decades</h3>
+                <p class="article-card-excerpt">
+                  Heat, light, and humidity are your fragrance's worst enemies. A poorly stored Eau de Parfum can turn sour within a year. We reveal the exact conditions that will keep your collection pristine — and the storage myths you need to stop believing.
+                </p>
+                <div class="article-card-meta">
+                  <img class="article-avatar-sm" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&q=80" alt="Dr. Elena Vasquez" onerror="this.src='assets/images/placeholder.svg'" />
+                  <span class="article-author-sm">Dr. Elena Vasquez</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-date-sm">Jan 5, 2026</span>
+                  <span class="article-sep">·</span>
+                  <span class="article-read-time">4 min</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div><!-- .blog-articles-grid -->
+
+        <div class="blog-load-more">
+          <button class="btn-outline" id="load-more-btn">Load More Articles</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Full Article: Layering ──────────────────── -->
+    <section id="article-layering" class="full-article-section">
+      <div class="container full-article-container">
+
+        <div class="full-article-header">
+          <span class="article-badge tips" style="margin-bottom:var(--space-md);display:inline-block">Tips &amp; Tricks</span>
+          <h2 class="full-article-title">The Art of Layering Fragrances</h2>
+          <p class="full-article-subtitle">How professional perfumers build unique, complex scent signatures by combining multiple fragrances — and how you can do it at home.</p>
+          <div class="full-article-meta">
+            <span>By Sophie Beaumont, Head Perfumer</span>
+            <span>·</span>
+            <span>March 5, 2026</span>
+            <span>·</span>
+            <span>6 min read</span>
+          </div>
+        </div>
+
+        <img
+          class="full-article-hero-img"
+          src="https://images.unsplash.com/photo-1583467875263-d50de56eb082?w=1200&h=600&fit=crop&q=80"
+          alt="Collection of luxury perfume bottles for layering"
+          onerror="this.src='assets/images/placeholder.svg'"
+        />
+
+        <div class="full-article-body">
+
+          <p>Every great perfumer knows a secret that the fragrance industry rarely publicises: the most extraordinary scents are not always found in a single bottle. They are born in the space <em>between</em> two.</p>
+
+          <p>Layering — the practice of applying two or more fragrances simultaneously — has been a cornerstone of Middle Eastern perfumery for centuries. In the souks of Dubai and the attar shops of Cairo, customers have always blended their own scent combinations, creating something entirely personal and unrepeatable. It is only recently that Western fine fragrance has begun to embrace this tradition.</p>
+
+          <h3>Why Layering Works</h3>
+
+          <p>Fragrances are built in architectural tiers: top notes (the first impression), heart notes (the soul), and base notes (the lasting trail). When you layer two fragrances, their molecular components interact in real time on your skin, creating blends, harmonics, and contrasts that neither bottle could achieve alone.</p>
+
+          <p>Think of it like music: a chord is more interesting than any single note.</p>
+
+          <h3>The Golden Rules of Layering</h3>
+
+          <ul class="article-list">
+            <li><strong>Apply heavier first.</strong> Always apply your richer, denser fragrance (oud, musks, woods) directly to skin before your lighter, more volatile top notes. This creates depth and ensures longevity.</li>
+            <li><strong>Stay within complementary families.</strong> Floral + Floral works. Oriental + Woody works. Floral + Fresh + a touch of Woody works beautifully. Avoid clashing acidic citrus with dense resins.</li>
+            <li><strong>Less is more.</strong> One spray of each is usually sufficient. Over-layering creates noise, not harmony.</li>
+            <li><strong>Use moisturiser as a base.</strong> Unscented body lotion applied before fragrance gives the molecules something to cling to, enhancing longevity and reducing harshness.</li>
+            <li><strong>Give it 15 minutes.</strong> The initial application can feel jarring. Allow both fragrances to settle and evolve on your skin before making a judgement.</li>
+          </ul>
+
+          <h3>Our Recommended Pairings</h3>
+
+          <div class="article-pairings-grid">
+            <div class="pairing-card">
+              <div class="pairing-scents">Midnight Rose + Golden Oud</div>
+              <div class="pairing-result">Dark Floral Oriental — mysterious, long-lasting, unforgettable</div>
+            </div>
+            <div class="pairing-card">
+              <div class="pairing-scents">Jasmine Reverie + Sea Salt &amp; Driftwood</div>
+              <div class="pairing-result">Coastal Floral — fresh and romantic, perfect for warm days</div>
+            </div>
+            <div class="pairing-card">
+              <div class="pairing-scents">Cedar &amp; Storm + Leather &amp; Smoke</div>
+              <div class="pairing-result">Deep Woody Statement — commanding, bold, unmistakably masculine</div>
+            </div>
+            <div class="pairing-card">
+              <div class="pairing-scents">Santal Bloom + Hinoki Forest</div>
+              <div class="pairing-result">Meditative Woody — calm, sophisticated, perfect for focus</div>
+            </div>
+          </div>
+
+          <blockquote class="article-quote">
+            "A fragrance worn alone is a sentence. A fragrance layered with intention is a novel."
+            <cite>— Sophia Laurent, Grasse Institute of Perfumery</cite>
+          </blockquote>
+
+          <h3>Start Your Layering Journey</h3>
+
+          <p>The best way to begin is to choose two fragrances you already love — one heavier, one lighter — and experiment. Keep notes. Your perfect combination is waiting to be discovered.</p>
+
+          <p>At Scent Luxe, every fragrance in our collection has been designed with layering compatibility in mind. Ask our team for personalised pairing recommendations.</p>
+
+        </div>
+
+        <div class="article-cta-box">
+          <div class="article-cta-content">
+            <h3>Explore Our Fragrance Collection</h3>
+            <p>Find your perfect pairing from 12 hand-curated luxury fragrances.</p>
+            <a href="shop.html" class="btn-primary">Shop Now →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Topics Cloud ────────────────────────────── -->
+    <section class="blog-topics-section">
+      <div class="container">
+        <h2 class="section-title">Explore by Topic</h2>
+        <div class="section-divider"></div>
+        <div class="topics-cloud">
+          <a href="#" class="topic-tag large">Fragrance Layering</a>
+          <a href="#" class="topic-tag">Oud &amp; Amber</a>
+          <a href="#" class="topic-tag large">Signature Scent</a>
+          <a href="#" class="topic-tag">Storage Tips</a>
+          <a href="#" class="topic-tag">Oriental Perfumery</a>
+          <a href="#" class="topic-tag large">Floral Notes</a>
+          <a href="#" class="topic-tag">Perfume History</a>
+          <a href="#" class="topic-tag">EDP vs EDT</a>
+          <a href="#" class="topic-tag large">Winter Fragrances</a>
+          <a href="#" class="topic-tag">Grasse Flowers</a>
+          <a href="#" class="topic-tag">Niche Perfumery</a>
+          <a href="#" class="topic-tag large">Scent &amp; Memory</a>
+          <a href="#" class="topic-tag">Sustainable Sourcing</a>
+          <a href="#" class="topic-tag">Gift Guides</a>
+          <a href="#" class="topic-tag large">Men's Fragrances</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Newsletter CTA ──────────────────────────── -->
+    <section class="blog-newsletter reveal">
+      <div class="container">
+        <div class="blog-newsletter-inner">
+          <div class="blog-newsletter-icon">📖</div>
+          <h2 class="blog-newsletter-title">Never Miss an Article</h2>
+          <p class="blog-newsletter-desc">Join 12,000+ fragrance enthusiasts who receive our weekly journal — new guides, seasonal recommendations, and exclusive perfumer interviews.</p>
+          <form class="blog-newsletter-form" id="blog-newsletter-form" novalidate>
+            <input type="email" placeholder="Your email address" class="blog-newsletter-input" required />
+            <button type="submit" class="btn-primary">Subscribe Free</button>
+          </form>
+          <p class="blog-newsletter-note">No spam. Unsubscribe anytime. Written by real perfumers.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

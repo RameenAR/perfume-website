@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Scent Luxe. We'd love to hear from you." />
+  <title>Contact | Scent Luxe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── Contact Hero ────────────────────────────── -->
+    <div class="contact-hero" aria-label="Contact hero">
+      <img
+        class="contact-hero-img"
+        src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=1600&h=500&fit=crop&q=80"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        onerror="this.style.display='none'"
+      />
+      <div class="contact-hero-overlay" aria-hidden="true"></div>
+      <div class="contact-hero-content">
+        <span class="contact-hero-eyebrow">We're here for you</span>
+        <h1 class="contact-hero-title">We'd Love to<br/><em>Hear From You</em></h1>
+        <p class="contact-hero-subtitle">Send us a message and we'll respond within 24 hours</p>
+      </div>
+    </div>
+
+    <div class="container contact-page-wrap">
+
+      <div class="contact-layout">
+
+        <!-- ── Contact Form ────────────────────────── -->
+        <div class="contact-form-section">
+
+          <form id="contact-form" novalidate aria-label="Contact form">
+
+            <!-- Name -->
+            <div class="form-group">
+              <label class="form-label" for="field-name">Full Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="field-name"
+                name="name"
+                placeholder="e.g. Aisha Khan"
+                autocomplete="name"
+                required
+              />
+              <span class="field-error" id="error-name" aria-live="polite"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="field-email">Email Address</label>
+              <input
+                class="form-input"
+                type="email"
+                id="field-email"
+                name="email"
+                placeholder="e.g. aisha@example.com"
+                autocomplete="email"
+                required
+              />
+              <span class="field-error" id="error-email" aria-live="polite"></span>
+            </div>
+
+            <!-- Subject -->
+            <div class="form-group">
+              <label class="form-label" for="field-subject">Subject</label>
+              <select class="form-select" id="field-subject" name="subject">
+                <option value="general">General Inquiry</option>
+                <option value="order">Order Inquiry</option>
+                <option value="product">Product Question</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label class="form-label" for="field-message">Message</label>
+              <textarea
+                class="form-textarea"
+                id="field-message"
+                name="message"
+                placeholder="Tell us how we can help you…"
+                required
+              ></textarea>
+              <span class="field-error" id="error-message" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:1rem">
+              Send Message
+            </button>
+
+          </form>
+
+          <!-- Success State -->
+          <div id="form-success" style="display:none;" role="alert">
+            <div class="success-icon">✓</div>
+            <h2 class="success-title">Message Sent!</h2>
+            <p class="success-text">Thank you for reaching out. We'll reply within 24 hours.</p>
+            <button class="btn-outline" id="btn-send-another">Send Another Message</button>
+          </div>
+
+        </div>
+
+        <!-- ── Contact Info ───────────────────────── -->
+        <aside class="contact-info" aria-label="Contact information">
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <strong>Our Boutique</strong>
+              <span>14 Rue de la Paix, Paris, France 75002</span>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-text">
+              <strong>Email Us</strong>
+              <a href="mailto:hello@scentluxe.com">hello@scentluxe.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-text">
+              <strong>Call Us</strong>
+              <span>+33 1 42 00 00 00</span>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">🕐</div>
+            <div class="contact-info-text">
+              <strong>Opening Hours</strong>
+              <span>Mon–Sat: 10:00 – 19:00<br/>Sunday: 12:00 – 17:00</span>
+            </div>
+          </div>
+
+          <div class="map-placeholder" aria-label="Paris boutique location">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&h=300&fit=crop&q=80" alt="Paris, France — our boutique location" loading="lazy" onerror="this.src='assets/images/placeholder.svg'" />
+            <div class="map-placeholder-text">14 Rue de la Paix · Paris, France</div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
